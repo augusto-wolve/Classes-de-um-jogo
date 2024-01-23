@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes de um jogo</title>
+    <style>
+        body{
+            background: url('https://img.freepik.com/fotos-premium/paisagem-de-fundo-do-videogame-com-montanhas-e-florestas-em-pixels-de-16-bits-localizacao-da-natureza-do-jogo-de-arcade-retro-com-pixel-art-montanha-colinas-picos-de-neve-ceu-e-nuvens-arvores-grama-e-lago_685067-3734.jpg') no-repeat 50%;
+            background-size: cover;
+           display: flex;
+            color: orange;
+        }
+
+        body h1{
+            align-content: center;
+            align-items: center;
+            display: flex;
+           
+        }
+       div { 
+        
+        margin-top: 200px;
+        margin-left: 150px;
+       }
+       
+        .guerreiro img{
+           width: 30vh;
+        }
+
+        .mago img{
+            width: 27vh;
+        }
+        .monge img {
+            width: 29vh;
+        }
+        .ninja img{
+            width: 29vh;
+        }
+
+      
+        .botao{
+            margin-top: 30%;
+            align-items: center;
+            align-content: center;
+        }
+
+        input{
+            display: flex;
+        }
+
+        footer{
+            margin-top: 40%;
+            
+           display: flex;
+           align-items: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><bold>Escolha Sua Classe =></bold> </h1>
+    <div class = 'guerreiro'><img src="https://cdnb.artstation.com/p/assets/images/images/029/723/437/original/-1.gif?1598447389" alt=""> <input type="button" value="Escolha aqui" id="escolheguerreiro" onclick="escolheguerreiro()" > <h2>Guerreiro</h2></div>
+    <div class = 'mago'><img src="https://img.freepik.com/vetores-premium/mago-ou-mago-em-manto-verde-e-chapeu-com-equipe-conjuram-estilo-2d-de-personagem-de-jogo-de-pixel_273625-2289.jpg" alt=""> <input type="button" value="Escolha aqui" onclick="escolhemago()" id="escolhemago"><h2>Mago</h2></div>
+    <div class = 'monge'><img src="https://img.freepik.com/vetores-premium/pixel-art-de-monge-careca-em-pe_150088-1124.jpg?w=2000" alt=""> <input type="button" value="Escolha aqui" onclick="escolhemonge()" id="escolhemonge"><h2>Monge</h2></div>
+    <div class= "ninja "><img src="data:image/png;base64,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" alt=""> <input type="button" value="Escolha Aqui!" onclick="escolheninja()" id="escolheninja" ><h2>Ninja</h2></div>
+    <footer>Ola</footer>
+    <script src="index.js"></script>
+</body>
+</html
